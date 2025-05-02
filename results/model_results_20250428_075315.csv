@@ -1,0 +1,19 @@
+model,sampling,roc_auc,f1,model_object
+Logistic Regression,None,0.5271002710027101,0.7749229936729936,"LogisticRegression(C=10, class_weight='balanced', random_state=42)"
+Random Forest,None,0.6863143631436314,0.9604454685099847,"RandomForestClassifier(class_weight='balanced', max_depth=20, random_state=42)"
+Logistic Regression,SMOTE,0.7260807996668055,0.673202614379085,"Pipeline(steps=[('sampling', SMOTE(random_state=42)),
+                ('model',
+                 LogisticRegression(C=10, class_weight='balanced',
+                                    random_state=42))])"
+Random Forest,SMOTE,0.9954352353186172,0.9795918367346939,"Pipeline(steps=[('sampling', SMOTE(random_state=42)),
+                ('model',
+                 RandomForestClassifier(class_weight='balanced', max_depth=10,
+                                        random_state=42))])"
+Logistic Regression,UnderSampling,0.5604395604395604,0.5101010101010102,"Pipeline(steps=[('sampling', RandomUnderSampler(random_state=42)),
+                ('model',
+                 LogisticRegression(C=1, class_weight='balanced',
+                                    random_state=42))])"
+Random Forest,UnderSampling,0.5604395604395604,0.5556390977443609,"Pipeline(steps=[('sampling', RandomUnderSampler(random_state=42)),
+                ('model',
+                 RandomForestClassifier(class_weight='balanced', max_depth=10,
+                                        n_estimators=200, random_state=42))])"
