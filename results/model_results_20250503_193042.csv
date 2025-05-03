@@ -1,0 +1,38 @@
+model,sampling,training_time,f1,precision,recall,roc_auc,model_object
+Random Forest,SMOTE,10.378846168518066,0.9938569819517487,0.993677501713666,0.994161801501251,0.9629484945008715,"Pipeline(steps=[('sampling', SMOTE(random_state=42)),
+                ('model', RandomForestClassifier(random_state=42))])"
+Gradient Boosting,ADASYN,24.878533363342285,0.9807343349131663,0.9885530828828116,0.9745621351125938,0.9588216439289221,"Pipeline(steps=[('sampling', ADASYN(random_state=42)),
+                ('model', GradientBoostingClassifier(random_state=42))])"
+SVM,ADASYN,25.669378995895386,0.9409600008374468,0.990979169759619,0.9020016680567139,0.9565478694633092,"Pipeline(steps=[('sampling', ADASYN(random_state=42)),
+                ('model', SVC(probability=True, random_state=42))])"
+Decision Tree,RandomUnderSampler,0.01009678840637207,0.9206991372504412,0.9907745325281547,0.8665554628857381,0.885489913256005,"Pipeline(steps=[('sampling', RandomUnderSampler(random_state=42)),
+                ('model', DecisionTreeClassifier(random_state=42))])"
+XGBoost,SMOTE,0.5281786918640137,0.9928250502580642,0.9927455315650621,0.9929107589658048,0.9613558507121822,"Pipeline(steps=[('sampling', SMOTE(random_state=42)),
+                ('model',
+                 XGBClassifier(base_score=None, booster=None, callbacks=None,
+                               colsample_bylevel=None, colsample_bynode=None,
+                               colsample_bytree=None, device=None,
+                               early_stopping_rounds=None,
+                               enable_categorical=False, eval_metric=None,
+                               feature_types=None, feature_weights=None,
+                               gamma=None, grow_policy=None,
+                               importance_type=None,
+                               interaction_constraints=None, learning_rate=None,
+                               max_bin=None, max_cat_threshold=None,
+                               max_cat_to_onehot=None, max_delta_step=None,
+                               max_depth=None, max_leaves=None,
+                               min_child_weight=None, missing=nan,
+                               monotone_constraints=None, multi_strategy=None,
+                               n_estimators=None, n_jobs=None,
+                               num_parallel_tree=None, ...))])"
+CatBoost,SMOTE,40.3606379032135,0.9906108572645134,0.9913722093965788,0.9899916597164303,0.9706512811266703,"Pipeline(steps=[('sampling', SMOTE(random_state=42)),
+                ('model',
+                 <catboost.core.CatBoostClassifier object at 0x00000268DBACD3D0>)])"
+AdaBoost,RandomUnderSampler,0.19922304153442383,0.9131583403673639,0.991737065834432,0.853628023352794,0.9358935833483581,"Pipeline(steps=[('sampling', RandomUnderSampler(random_state=42)),
+                ('model', AdaBoostClassifier(random_state=42))])"
+Extra Trees,ADASYN,1.3073022365570068,0.9945819695684781,0.9945048625988157,0.9949958298582152,0.9793757637678546,"Pipeline(steps=[('sampling', ADASYN(random_state=42)),
+                ('model', ExtraTreesClassifier(random_state=42))])"
+Bagging,RandomUnderSampler,0.08122706413269043,0.9168292373819389,0.9917578374135307,0.859883236030025,0.9320972814872689,"Pipeline(steps=[('sampling', RandomUnderSampler(random_state=42)),
+                ('model', BaggingClassifier(random_state=42))])"
+Hist Gradient Boosting,SMOTE,4.472160816192627,0.99091380168605,0.9915234930609251,0.9904086738949124,0.9688482881583428,"Pipeline(steps=[('sampling', SMOTE(random_state=42)),
+                ('model', HistGradientBoostingClassifier(random_state=42))])"
