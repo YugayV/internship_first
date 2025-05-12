@@ -1,2 +1,0 @@
-model,training_time,f1,precision,recall,roc_auc,model_object
-TensorFlow NN,58.12159323692322,0.9933711146495813,0.9946083032931905,0.9945788156797332,0.9628783781076588,"<Sequential name=sequential_3, built=True>"
